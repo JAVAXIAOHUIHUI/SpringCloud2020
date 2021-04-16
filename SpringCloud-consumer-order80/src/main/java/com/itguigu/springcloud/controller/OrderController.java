@@ -1,4 +1,4 @@
-package com.itguigu.springcloud;
+package com.itguigu.springcloud.controller;
 
 import com.itguigu.springcloud.entities.CommonResult;
 import com.itguigu.springcloud.entities.Payment;
