@@ -5,7 +5,7 @@ package com.itguigu.springcloud.dao;
  * @DATE 年04月16日21:58
  */
 
-import com.itguigu.springcloud.emtities.Payment;
+import com.itguigu.springcloud.entities.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
