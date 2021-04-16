@@ -23,9 +23,9 @@ public interface PaymentDao {
 
     /**
      * 根据id查询订单类
-     * @param paymentId
+     * @param id
      * @return
      */
-    public Payment getPaymentById(@Param("paymentId") Long paymentId);
+    public Payment getPaymentById(@Param("id") Long id);
 
 }

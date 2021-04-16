@@ -1,4 +1,4 @@
-package com.itguigu.springcloud.impl;
+package com.itguigu.springcloud.service.impl;
 
 import com.itguigu.springcloud.dao.PaymentDao;
 import com.itguigu.springcloud.entities.Payment;
