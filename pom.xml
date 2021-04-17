@@ -14,6 +14,7 @@
         <module>SpringCloud-api-common</module>
         <module>SpringCloud-eureka-server7001</module>
         <module>SpringCloud-eureka-server7002</module>
+        <module>SpringCloud-provider-payment8002</module>
     </modules>
 
     <!--统一管理jar包版本-->
