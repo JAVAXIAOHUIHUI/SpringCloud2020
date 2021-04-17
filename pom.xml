@@ -13,6 +13,7 @@
         <module>SpringCloud-consumer-order80</module>
         <module>SpringCloud-api-common</module>
         <module>SpringCloud-eureka-server7001</module>
+        <module>SpringCloud-eureka-server7002</module>
     </modules>
 
     <!--统一管理jar包版本-->
