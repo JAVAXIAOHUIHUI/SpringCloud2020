@@ -9,7 +9,8 @@ import java.util.concurrent.TimeUnit;
  * @AUTHOR HU
  * @DATE 年04月18日22:59
  */
-public class PaymentHystrixController implements PaymentHystrixService {
+@Service
+public class PaymentHystrixServiceImpl implements PaymentHystrixService {
 
     /**
      * 正常访问
