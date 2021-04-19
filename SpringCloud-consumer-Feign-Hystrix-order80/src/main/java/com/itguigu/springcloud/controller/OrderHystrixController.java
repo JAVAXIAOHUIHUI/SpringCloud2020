@@ -1,6 +1,7 @@
 package com.itguigu.springcloud.controller;
 
 import com.itguigu.springcloud.service.HystrixService;
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.netflix.ribbon.proxy.annotation.Hystrix;
@@ -17,12 +18,14 @@ import javax.annotation.Resource;
  */
 @RestController
 @Slf4j
+@DefaultProperties(defaultFallback = "payment_Global_FallbackMethod")
 public class OrderHystrixController {
 
     @Resource
     private HystrixService hystrixService;
 
     @GetMapping("/order/hystrix/ok/{id}")
+    @HystrixCommand
     public String paymentInfo_OK(@PathVariable("id") Integer id) {
         String result = hystrixService.paymentInfo_OK(id);
         log.info("order*****result:" + result);
@@ -47,6 +50,11 @@ public class OrderHystrixController {
 
     public String paymentTimeOutFallbackMethod(@PathVariable("id") Integer id) {
         return "我是消费者80,对方支付系统繁忙请10秒种后再试或者自己运行出错请检查自己,o(╥﹏╥)o";
+    }
+
+
+    public String payment_Global_FallbackMethod() {
+        return "payment_Global_FallbackMethod 对方系统繁忙或已宕机，请稍后再试或者自己运行出错请检查自己,o(╥﹏╥)o";
     }
 
 }
